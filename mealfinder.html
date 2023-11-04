@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Meal App</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <link rel="stylesheet" href="mealfinder.css">
+</head>
+<body id="main-body">
+   
+    <header>
+        <div id="nav-bar">
+            <div class="logo-name">
+                <a href="#"><i class="far fa-soup"></i>Meal App</a>
+            </div>
+            <div class="favourite-meal">
+                <button href="" onclick="openNavigation(); FavMeal();">
+                    <i class="fa-regular fa-heart"></i> Favourite meal
+                </button>
+            </div>
+
+            <div id="side" class="sidenav">
+                <div id="fav-meal-heading" class="fav-meal-heading">
+                    <a href="#" class="heading-txt">Favourites</a>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNavigation()"><i class="fa-solid fa-circle-xmark"></i></a>
+                </div>
+                <div id="favourites-body">
+                    <div>
+                        <span>Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+    <hr>
+ 
+    <main>
+        <div class="container">
+            <div class="meal-wrapper">
+                <div class="meal-search">
+                 
+                    <h2 class="title">Find Your Meal</h2>
+                    
+
+                   
+                    <div class="meal-search-box" onkeyup="showMealList()">
+                        <input type="search" class="search-control" placeholder="Search For Your Meal..." id="search-input">
+                    </div>
+                </div>
+
+                <div class="meal-result">
+                    <h2 class="title">Your Search Result:</h2>
+                   
+                    
+                    <div id="meal">
+                      
+                    </div>
+                </div>
+
+          
+                <div class="meal-details">
+                    
+                    <button type="button" class="btn recipe-close-btn" id="recipe-close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+
+                   
+                    <div id="meal-details-content">
+                      
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </main>
+
+    <script src="mealfinder.js"></script>
+</body>
+</html>
